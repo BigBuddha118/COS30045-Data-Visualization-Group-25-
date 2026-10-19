@@ -4,9 +4,10 @@ Group 25 project for COS30045 Data Visualisation. An interactive web-based data 
 
 ## Team Members
 
-| Name                     | Role                               |
-| Kevin Kennedy            | [e.g. data processing / KNIME]     |
-| Prit A/L Vinesh Kumar    | [e.g. visualisation / D3.js]       |
+| Name | Role |
+|------|------|
+| Kevin Kennedy | [e.g. data processing / KNIME] |
+| Prit A/L Vinesh Kumar | [e.g. visualisation / D3.js] |
 | Vaeshen Raj A/L Jayandra | [e.g. documentation / design book] |
 
 ## Project Overview
@@ -29,7 +30,6 @@ Group 25 project for COS30045 Data Visualisation. An interactive web-based data 
 - GitHub / GitHub Classroom
 
 ## Repository Structure
-
 
 ## How to Run
 
