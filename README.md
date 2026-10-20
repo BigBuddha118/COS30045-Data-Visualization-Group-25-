@@ -6,17 +6,17 @@ Group 25 project for COS30045 Data Visualisation. An interactive web-based data 
 
 | Name | Role |
 |------|------|
-| Kevin Kennedy | [e.g. Project Design Book] |
-| Prit A/L Vinesh Kumar | [e.g. D3 visualisation and presentation] |
-| Vaeshen Raj A/L Jayandra | [e.g. KNIME data processing] |
+| Kevin Kennedy | Project Design Book |
+| Prit A/L Vinesh Kumar | D3 visualisation and presentation |
+| Vaeshen Raj A/L Jayandra | KNIME data processing |
 
 ## Project Overview
 
-**Title:** [Project title, e.g. Roadside Enforcement in Australia, 2008–2024]
+**Title:** Roadside Enforcement in Australia, 2008–2024
 
 **Question:** How have positive alcohol and drug test rates and traffic fines changed across Australian states and territories from 2008 to 2024?
 
-**Purpose:** [One or two sentences on why this matters, e.g. to help road safety audiences see where and how enforcement results differ between jurisdictions over time.]
+**Purpose:** to help road safety audiences see where and how enforcement results differ between jurisdictions over time.
 
 ## Data
 
