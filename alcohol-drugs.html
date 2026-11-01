@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alcohol and drugs | Road Enforcement Australia</title>
+    <meta name="description" content="Breath tests, positive results and drugs detected in Australian roadside testing, 2008 to 2024.">
+
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Style/base.css">
+    <link rel="stylesheet" href="Style/visualisation.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar" aria-label="Primary">
+
+            <a href="index.html" class="logo-link" aria-label="Road Enforcement Australia home">
+                <img src="assets/img/logo.png" alt="" class="logo">
+                <span class="brand-text">Road Enforcement<span>Australia 2008&ndash;2024</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="alcohol-drugs.html" class="active" aria-current="page">Alcohol &amp; Drugs</a></li>
+                <li><a href="Fines.html">Fines</a></li>
+                <li><a href="hospitalisations.html">Hospitalisations</a></li>
+                <li><a href="About.html">About the Data</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-header">
+            <h1>Alcohol and drug testing</h1>
+            <p>
+                Police test drivers for alcohol with breath tests and for drugs
+                with roadside drug tests. These charts show how much testing happens,
+                how often it finds a positive result, and which drugs are found.
+            </p>
+        </section>
+
+        <!-- Chart 1 -->
+        <section class="data-story" id="tests">
+            <h2>How many drivers are breath tested?</h2>
+            <p>
+                The chart shows breath tests conducted each year from 2008 to 2024.
+                Use the buttons to switch between all states combined and each
+                state or territory, and hover over a dot to read the value.
+            </p>
+
+            <div class="filters" id="tests-filters" role="group" aria-label="Choose a state"><span class="filters-label">Show:</span></div>
+            <div class="chart-container" id="tests-line" role="group" aria-label="Line chart of breath tests conducted per year"></div>
+
+            <div class="callout">
+                <span class="callout-title">What this shows</span>
+                National breath testing ran at roughly 13 to 16 million tests a year
+                until 2019. In 2020 it fell to 7.3 million &mdash; 52% lower &mdash;
+                and <strong>all 8 states and territories</strong> tested fewer drivers than in 2019.
+                By 2024 the total was 10.3 million, still 33% below 2019.
+            </div>
+            <div class="callout caution">
+                <span class="callout-title">Read with care</span>
+                The timing matches the COVID-19 period, but this data records
+                how many tests took place, not why the number changed.
+            </div>
+        </section>
+
+        <!-- Chart 2 -->
+        <section class="data-story" id="rates">
+            <h2>Why do some states find more positive tests?</h2>
+            <p>
+                A positive breath test means the driver&rsquo;s reading was over the legal
+                limit. Each dot below is one state or territory in one year
+                (131 dots in total; Tasmania&rsquo;s positive results are not
+                reported for 2020&ndash;2024). The further right a dot is, the more
+                drivers were tested; the higher it is, the larger the share of
+                tests that were positive. Use the buttons to pick out one state.
+            </p>
+
+            <div class="filters" id="scatter-filters" role="group" aria-label="Highlight a state"><span class="filters-label">Highlight:</span></div>
+            <div class="chart-container" id="rate-scatter" role="group" aria-label="Scatter plot of breath tests conducted against the share that were positive"></div>
+
+            <div class="callout">
+                <span class="callout-title">What this shows</span>
+                Jurisdictions that test more drivers tend to find a smaller share
+                positive (a rank correlation of -0.74 across the 131 points).
+                In 2024 the Northern Territory recorded 8.2% positive tests, while every
+                other jurisdiction with data was between 0.27% and 0.82%.
+            </div>
+            <div class="callout caution">
+                <span class="callout-title">Read with care</span>
+                A higher share does <strong>not</strong> mean drivers there drink-drive more.
+                One likely explanation is that when police test very large numbers
+                of drivers at random, most tests are negative, while more targeted
+                testing finds a higher share. The data does not record how drivers
+                were chosen, so compare a state with its own past rather than with other states.
+            </div>
+        </section>
+
+        <!-- Chart 3 -->
+        <section class="data-story" id="drugs">
+            <h2>Which drugs show up in roadside drug tests?</h2>
+            <p>
+                In 2024, 55,391 positive drug tests were recorded across the eight
+                jurisdictions. Only the ACT, New South Wales, South Australia, Victoria and
+                Western Australia record <em>which</em> drug was found. Those five account for
+                37,561 positive tests (68%), so the chart covers them.
+            </p>
+
+            <div class="chart-container" id="drug-types" role="group" aria-label="Bar chart of drugs found in positive drug tests in 2024"></div>
+
+            <div class="callout">
+                <span class="callout-title">What this shows</span>
+                Amphetamines (including methylamphetamine) were involved in 61% of these
+                positive tests and cannabis in 46%, far ahead of cocaine
+                (7.5%) and ecstasy (3.6%). The percentages add up to more than 100%
+                because one test can detect more than one drug.
+            </div>
+            <div class="callout caution">
+                <span class="callout-title">Read with care</span>
+                States define their drug categories and testing stages slightly differently
+                &mdash; South Australia, for example, records methylamphetamine separately,
+                so it is combined with amphetamines here. Each test is counted once, at its
+                best available detection stage. These are counts of positive
+                tests, not of drivers and not a measure of impairment.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span data-current-year>2026</span> Group 25 </p>
+        <p>
+            Generative AI acknowledgement: Claude (Anthropic) was used to assist
+            with the website structure, code, data processing and written
+            content. All content was reviewed before submission.
+        </p>
+    </footer>
+
+    <!-- D3 first, then the shared helpers, then this page's charts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/enforcement-charts.js"></script>
+</body>
+</html>

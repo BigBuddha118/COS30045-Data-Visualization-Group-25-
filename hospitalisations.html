@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+
+    <!-- =========================================
+         PAGE SETTINGS
+    ========================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Hospitalisations | Road Enforcement Australia
+    </title>
+
+    <meta
+        name="description"
+        content="Road crash injury hospitalisations in Australia, 2011–2021"
+    >
+
+
+    <!-- =========================================
+         WEBSITE ICON
+    ========================================= -->
+
+    <link
+        rel="icon"
+        href="assets/img/logo.png"
+        type="image/png"
+    >
+
+
+    <!-- =========================================
+         GOOGLE FONTS
+    ========================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================
+         CSS STYLESHEETS
+    ========================================= -->
+
+    <link
+        rel="stylesheet"
+        href="Style/base.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="Style/visualisation.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         1. NAVIGATION BAR
+    ========================================= -->
+
+    <header>
+
+        <nav
+            class="navbar"
+            aria-label="Primary"
+        >
+
+            <!-- Website Logo -->
+
+            <a
+                href="index.html"
+                class="logo-link"
+                aria-label="Road Enforcement Australia home"
+            >
+
+                <img
+                    src="assets/img/logo.png"
+                    alt=""
+                    class="logo"
+                >
+
+                <span class="brand-text">
+                    Road Enforcement
+
+                    <span>
+                        Australia 2008–2024
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- Navigation Links -->
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alcohol-drugs.html">
+                        Alcohol &amp; Drugs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Fines.html">
+                        Fines
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="hospitalisations.html"
+                        class="active"
+                        aria-current="page"
+                    >
+                        Hospitalisations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="About.html">
+                        About the Data
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         2. MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- =====================================
+             PAGE HEADER
+        ===================================== -->
+
+        <section class="page-header">
+
+            <h1>
+                Road-crash injury hospitalisations
+            </h1>
+
+            <p>
+                Explore Australian road-crash injury
+                hospitalisations from
+
+                <strong>
+                    2011 to 2021
+                </strong>,
+
+                based on three hospitalisation
+                workbooks published in 2023.
+
+                This series measures hospitalised
+                injuries, not police testing or fines.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             CHART 1:
+             NATIONAL HOSPITALISATION TRENDS
+        ===================================== -->
+
+        <section class="data-story" id="national">
+
+            <h2>
+                How have hospitalisations changed nationally?
+            </h2>
+
+            <p>
+                Annual counts across Australia.
+
+                Hover over the line for the number
+                reported in each year.
+            </p>
+
+
+            <!-- National Line Chart -->
+
+            <div
+                class="chart-container"
+                id="hospital-national"
+                role="group"
+                aria-label="National hospitalisations line chart"
+            >
+            </div>
+
+
+            <!-- Chart Explanation -->
+
+            <div class="callout">
+
+                <span class="callout-title">
+                    What this shows
+                </span>
+
+                Annual hospitalisations rose from
+                34,033 in 2011 to 39,505 in 2021
+                (about 16% higher).
+
+            </div>
+
+
+            <!-- Data Limitation -->
+
+            <div class="callout caution">
+
+                <span class="callout-title">
+                    Read with care
+                </span>
+
+                These are hospitalisation counts,
+                not risk-adjusted injury rates.
+
+                Changes may reflect exposure,
+                reporting and other factors.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CHART 2:
+             STATE AND TERRITORY TRENDS
+        ===================================== -->
+
+        <section class="data-story" id="states">
+
+            <h2>
+                How do the state and territory trends differ?
+            </h2>
+
+            <p>
+                Select a state or territory to see
+                its annual hospitalisations.
+
+                Avoid interpreting larger raw
+                counts as higher individual risk.
+            </p>
+
+
+            <!-- State Filter Buttons -->
+
+            <div
+                class="filters"
+                id="hospital-state-filters"
+                role="group"
+                aria-label="Select state"
+            >
+            </div>
+
+
+            <!-- State Line Chart -->
+
+            <div
+                class="chart-container"
+                id="hospital-state"
+                role="group"
+                aria-label="State hospitalisations trend chart"
+            >
+            </div>
+
+
+            <!-- Data Limitation -->
+
+            <div class="callout caution">
+
+                <span class="callout-title">
+                    Read with care
+                </span>
+
+                Population sizes differ across
+                jurisdictions.
+
+                State figures are counts,
+                not per-capita rates.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CHART 3:
+             ROAD USER HOSPITALISATIONS
+        ===================================== -->
+
+        <section class="data-story" id="road-users">
+
+            <h2>
+                Which road-user groups are hospitalised?
+            </h2>
+
+            <p>
+                Select a year to compare hospitalised
+                injuries by road-user group.
+
+                The groups reflect the published
+                national workbook categories.
+            </p>
+
+
+            <!-- Year Filter Buttons -->
+
+            <div
+                class="filters"
+                id="hospital-user-filters"
+                role="group"
+                aria-label="Select year"
+            >
+            </div>
+
+
+            <!-- Road User Bar Chart -->
+
+            <div
+                class="chart-container"
+                id="hospital-users"
+                role="group"
+                aria-label="Road user hospitalisations bars"
+            >
+            </div>
+
+
+            <!-- Data Limitation -->
+
+            <div class="callout caution">
+
+                <span class="callout-title">
+                    Read with care
+                </span>
+
+                The bars describe hospitalisations,
+                not the risk of injury per road user.
+
+                Some road-user categories distinguish
+                drivers, passengers and unknown positions.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CHART 4:
+             FIRST NATIONS HOSPITALISATIONS
+        ===================================== -->
+
+        <section class="data-story" id="first-nations">
+
+            <h2>
+                Hospitalisations for First Nations peoples
+            </h2>
+
+            <p>
+                Annual hospitalisations reported for
+                First Nations peoples and
+                non-Indigenous Australians.
+
+                Choose one series or view both;
+                two series use different scales.
+            </p>
+
+
+            <!-- Population Filter Buttons -->
+
+            <div
+                class="filters"
+                id="hospital-first-filters"
+                role="group"
+                aria-label="Select population series"
+            >
+            </div>
+
+
+            <!-- First Nations Line Chart -->
+
+            <div
+                class="chart-container"
+                id="hospital-first"
+                role="group"
+                aria-label="First Nations and non-Indigenous hospitalisations"
+            >
+            </div>
+
+
+            <!-- Data Limitation -->
+
+            <div class="callout caution">
+
+                <span class="callout-title">
+                    Read with care
+                </span>
+
+                Do not interpret these totals as
+                population-standardised rates or
+                a measure of comparative risk.
+
+                The workbook also contains records
+                outside the two named status groups,
+                so they do not add to the national total.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         3. FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <p>
+            &copy;
+
+            <span data-current-year>
+                2026
+            </span>
+
+            Group 25
+        </p>
+
+        <p>
+            Source: Australian road-crash injury
+            hospitalisation publications
+            (2023 releases; data 2011–2021).
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         4. JAVASCRIPT FILES
+    ========================================= -->
+
+    <!-- D3.js Library -->
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+
+    <!-- Shared Chart Functions -->
+
+    <script src="js/shared.js"></script>
+
+
+    <!-- Main Website JavaScript -->
+
+    <script src="js/main.js"></script>
+
+
+    <!-- Hospitalisation Charts JavaScript -->
+
+    <script src="js/hospitalisations.js"></script>
+
+
+</body>
+
+</html>

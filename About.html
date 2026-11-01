@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About the data | Road Enforcement Australia</title>
+    <meta name="description" content="Sources, data preparation, limitations and ethics for the Road Enforcement Australia website.">
+
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Style/base.css">
+    <link rel="stylesheet" href="Style/visualisation.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar" aria-label="Primary">
+
+            <a href="index.html" class="logo-link" aria-label="Road Enforcement Australia home">
+                <img src="assets/img/logo.png" alt="" class="logo">
+                <span class="brand-text">Road Enforcement<span>Australia 2008&ndash;2024</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="alcohol-drugs.html">Alcohol &amp; Drugs</a></li>
+                <li><a href="Fines.html">Fines</a></li>
+                <li><a href="hospitalisations.html">Hospitalisations</a></li>
+                <li><a href="About.html" class="active" aria-current="page">About the Data</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-header">
+            <h1>About the data</h1>
+            <p>
+                Where the figures come from, how they were prepared, and what to keep
+                in mind when reading the charts.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Purpose</h2>
+            <p>
+                This site explains Australian state and territory police road
+                enforcement in plain language: how many drivers are tested for
+                alcohol and drugs, and how many fines are issued. It is built with
+                HTML, CSS and D3.js, and every chart is drawn in the browser from
+                the data files in the <code>data</code> folder.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Data source</h2>
+            <p>
+                The figures are police enforcement counts for Australia&rsquo;s eight states and
+                territories, 2008 to 2024, supplied as four Excel workbooks
+                (<code>police_enforcement_2024_alcohol_drug_tests</code>, <code>_fines</code>,
+                <code>_positive_breath_tests</code> and <code>_positive_drug_tests</code>)
+                and two summary CSV files (<code>enforcement_state_year.csv</code> and
+                <code>fines_state_year_offence.csv</code>).
+            </p>
+        </section>
+
+        <section class="content-section"><h2>Hospitalised road-crash injuries (2011–2021)</h2>
+<p>The Hospitalisations page uses three additional source workbooks: <code>hospitalisation_injury_publication_sep2023.xlsx</code>, <code>state-and-territory-hospitalisation-injury-publication-2023.xlsx</code>, and <code>First-Nations-hospitalised-injuries-2023.xlsx</code>. Their published Table 1 and Table 2 series are exported to four browser-friendly CSV files. The hospitalisation series ends in 2021, unlike the police enforcement series (2024).</p>
+<p>Hospitalisations count injury admissions/cases rather than road crashes or unique drivers. State totals and population subgroups should not be directly compared as risk rates without appropriate denominators and reporting context. First Nations and non-Indigenous values do not sum to the overall total because status may be unknown or otherwise excluded.</p></section>
+<section class="content-section">
+            <h2>How the data was prepared</h2>
+            <ul>
+                <li>The two summary CSVs were tidied: columns renamed, blank cells kept as missing rather than turned into zero, and <code>Sum</code> checked against the workbooks and confirmed to be the number of charges.</li>
+                <li>Only <strong>fines</strong> are charted. Arrests and charges are left out because some jurisdictions (Queensland and Victoria) report none, which would look like a real zero.</li>
+                <li>The drug-type chart uses the positive drug test workbook for 2024, keeping each test once (at its best detection stage), and only the five jurisdictions that record the drug found. The total matches the summary CSV exactly.</li>
+                <li>The age chart uses the 2024 fines workbook and leaves out fines where the age is unknown.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Missing and incomplete data</h2>
+            <ul>
+                <li>Tasmania does not report positive breath tests for 2020&ndash;2024.</li>
+                <li>The Northern Territory has drug test totals for only two years (2021 and 2022), the ACT is missing 2008&ndash;2011 and Tasmania is missing 2009. Drug test rates are therefore not charted.</li>
+                <li>Speeding fines are missing for one jurisdiction in 2008, 2009 and 2022, seatbelt fines start in 2017 and cover all eight jurisdictions only from 2020, and unlicensed driving fines exist only for 2023 and 2024. The long-run trend is therefore shown for mobile phone fines, which all eight report for every year.</li>
+                <li>Some figures are a count of tests or fines, not of people: one driver can be tested or fined more than once.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Privacy and ethics</h2>
+            <p>
+                The data is aggregated: totals by state, year, age group and offence.
+                It contains no names or other personal details, and nobody can be
+                identified from it.
+            </p>
+            <p>
+                Enforcement data describes police activity, not the behaviour of the public.
+                A state that issues more fines, or finds a higher share of positive tests, is not
+                necessarily a state with worse drivers. For that reason the charts avoid ranking
+                states against each other and each one is followed by a note on what it cannot show.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Common questions</h2>
+
+            <details class="faq-item">
+                <summary>What counts as a positive test?</summary>
+                <p>A positive breath test is one over the legal limit. A positive drug test is one where a drug was detected.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Why aren&rsquo;t states ranked against each other?</summary>
+                <p>States test in different ways. Random testing of very large numbers of drivers tends to produce a low share of positives, while more targeted testing tends to produce a higher share, so the shares can&rsquo;t be compared fairly. The data does not record how drivers were chosen.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What is the difference between a fine and a charge?</summary>
+                <p>A fine is a penalty issued on the spot. A charge starts a court process and is used for more serious offences. Some offences, such as unlicensed driving, lead to charges more often than fines.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Why do some charts have gaps?</summary>
+                <p>Where a state did not report a number, it is left blank and the chart skips it, rather than showing it as zero.</p>
+            </details>
+        </section>
+
+        <section class="content-section">
+            <h2>Generative AI acknowledgement</h2>
+            <p>
+                Claude (Anthropic) was used to help structure the website, write the HTML,
+                CSS and D3 code, prepare the data files and draft the written content. The
+                figures were checked against the supplied files, and all content was reviewed
+                before submission.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span data-current-year>2026</span> Group 25</p>
+        <p>
+            Generative AI acknowledgement: Claude (Anthropic) was used to assist
+            with the website structure, code, data processing and written
+            content. All content was reviewed before submission.
+        </p>
+    </footer>
+
+    <!-- D3 first, then the shared helpers, then this page's charts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

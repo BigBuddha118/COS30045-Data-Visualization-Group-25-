@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fines | Road Enforcement Australia</title>
+    <meta name="description" content="Fines for speeding, mobile phone use, seatbelts and unlicensed driving in Australia, 2008 to 2024.">
+
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Style/base.css">
+    <link rel="stylesheet" href="Style/visualisation.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar" aria-label="Primary">
+
+            <a href="index.html" class="logo-link" aria-label="Road Enforcement Australia home">
+                <img src="assets/img/logo.png" alt="" class="logo">
+                <span class="brand-text">Road Enforcement<span>Australia 2008&ndash;2024</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="alcohol-drugs.html">Alcohol &amp; Drugs</a></li>
+                <li><a href="Fines.html" class="active" aria-current="page">Fines</a></li>
+                <li><a href="hospitalisations.html">Hospitalisations</a></li>
+                <li><a href="About.html">About the Data</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-header">
+            <h1>Fines</h1>
+            <p>
+                Police issue fines for offences such as speeding, using a mobile
+                phone, not wearing a seatbelt and driving unlicensed. These charts
+                show which offences lead to the most fines, how mobile phone fines
+                have changed, and who receives them.
+            </p>
+        </section>
+
+        <!-- Chart 4 -->
+        <section class="data-story" id="offences">
+            <h2>Which offences lead to the most fines?</h2>
+            <p>
+                The donut adds up fines issued in 2024 for four offences across all eight
+                jurisdictions. Hover over a slice or a legend entry for the detail.
+            </p>
+
+            <div class="chart-container" id="fines-donut" role="group" aria-label="Donut chart of 2024 fines by offence"></div>
+
+            <div class="callout">
+                <span class="callout-title">What this shows</span>
+                Speeding accounted for 85.5% of the 3,888,724 fines
+                (3,323,333). Mobile phone use made up 8.5%,
+                seatbelts 4.7% and unlicensed driving 1.3%.
+            </div>
+            <div class="callout caution">
+                <span class="callout-title">Read with care</span>
+                Fines are only part of enforcement. Unlicensed driving is mostly dealt with by
+                charges rather than fines: there were 56,502 charges against
+                51,150 fines in 2024, even though QLD and VIC show no charges at all.
+                So its small slice understates how often it is policed. Other offences,
+                such as drink-driving, are not part of this chart.
+            </div>
+        </section>
+
+        <!-- Chart 5 -->
+        <section class="data-story" id="mobile">
+            <h2>How have mobile phone fines changed?</h2>
+            <p>
+                Each panel shows one state or territory&rsquo;s mobile phone fines per year from 2008 to 2024.
+                <strong>Every panel has its own scale</strong>, because the numbers differ
+                enormously: New South Wales issued 161,997 fines in 2024, the Northern Territory just 244.
+                Hover over a panel to read the value for a year.
+            </p>
+
+            <div class="small-multiples" id="mobile-lines" role="group" aria-label="Eight small line charts of mobile phone fines per year, one per state or territory"></div>
+
+            <div class="callout">
+                <span class="callout-title">What this shows</span>
+                Three jurisdictions show large jumps. New South Wales went from 25,463 fines
+                in 2019 to 151,725 in 2020 and 216,042 in 2023. Queensland went from
+                4,823 in 2020 to 121,639 in 2022. The ACT went from 288
+                in 2023 to 27,125 in 2024.
+            </div>
+            <div class="callout caution">
+                <span class="callout-title">Read with care</span>
+                These jumps line up with camera enforcement: in 2024, cameras detected about
+                91% of New South Wales, 96% of Queensland and 99% of ACT mobile phone fines
+                (Victoria: 77%). The data shows how fines were detected, but not when each
+                state introduced cameras, or whether more drivers started using phones.
+                A rise in fines should not be read as a rise in phone use.
+            </div>
+        </section>
+
+        <!-- Chart 6 -->
+        <section class="data-story" id="age">
+            <h2>Who receives the fines?</h2>
+            <p>
+                This chart shows 2024 fines by the age group of the driver. Use the buttons to
+                look at one offence or all four together.
+            </p>
+
+            <div class="filters" id="age-filters" role="group" aria-label="Choose an offence"><span class="filters-label">Offence:</span></div>
+            <div class="chart-container" id="age-bars" role="group" aria-label="Bar chart of 2024 fines by driver age group"></div>
+
+            <div class="callout">
+                <span class="callout-title">What this shows</span>
+                Across all four offences, drivers aged 40&ndash;64 received the most fines
+                (about 1.24 million), followed by those aged 26&ndash;39
+                (about 0.90 million). Drivers aged 65 and over received
+                about 330 thousand and drivers under 17 about 23 thousand.
+            </div>
+            <div class="callout caution">
+                <span class="callout-title">Read with care</span>
+                These are counts, not rates. The age groups cover different numbers of years
+                (40&ndash;64 spans 25 years, 17&ndash;25 spans 9) and contain different numbers of drivers,
+                so a taller bar does not mean those drivers offend more. Age is only recorded
+                for 52% of mobile phone fines, 54% of seatbelt fines,
+                78% of speeding fines and 87% of unlicensed driving fines;
+                fines without a known age are left out.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span data-current-year>2026</span> Group 25</p>
+        <p>
+            Generative AI acknowledgement: Claude (Anthropic) was used to assist
+            with the website structure, code, data processing and written
+            content. All content was reviewed before submission.
+        </p>
+    </footer>
+
+    <!-- D3 first, then the shared helpers, then this page's charts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/enforcement-charts.js"></script>
+</body>
+</html>
